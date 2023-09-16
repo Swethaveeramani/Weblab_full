@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CGPA Calculator</title>
+</head>
+<style>
+	 body {margin:0;font-family:Arial}
+    
+    .topnav {
+      overflow: hidden;
+      background-color: cadetblue;
+    }
+    
+    .topnav a {
+      float: left;
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    
+    .active {
+      background-color: pink;
+      color:black;
+    }
+    
+    .topnav .icon {
+      display: none;
+    }
+    
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+    
+    .dropdown .dropbtn {
+      font-size: 17px;    
+      border: none;
+      outline: none;
+      color: black;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      float: none;
+      color:rgb(105, 208, 249);
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    
+    .topnav a:hover, .dropdown:hover .dropbtn {
+      background-color: pink;
+      color: skyblue;
+    }
+    
+    .dropdown-content a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    
+    @media screen and (max-width: 600px) {
+      .topnav a:not(:first-child), .dropdown .dropbtn {
+        display: none;
+      }
+      .topnav a.icon {
+        float: right;
+        display: block;
+      }
+    }
+    
+    @media screen and (max-width: 600px) {
+      .topnav.responsive {position: relative;}
+      .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+      .topnav.responsive .dropdown {float: none;}
+      .topnav.responsive .dropdown-content {position: relative;}
+      .topnav.responsive .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+      }
+    }
+fieldset {
+  border: 1px solid brown;
+  background-color: #f2f2f2;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius:border-box;
+  width: 100%;
+  max-width: 500px;
+  height:100%;
+}
+legend {
+  font-weight: bold;
+}
+button {
+  background-color: palevioletred ;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover{
+	background-color: skyblue;
+}
+fieldset {
+  padding: 10px; /* add padding to reduce the size */
+  border: 1; /* remove border to make it more compact */
+  margin: 1; /* remove margin to make it fit tightly */
+}h1 {
+  font-size: 36px; /* change the font size */
+  font-weight: bold; /* add bold weight to the text */
+  color: #333; /* change the text color */
+  text-align: center; /* align the text to the center */
+  text-transform: uppercase; /* transform the text to uppercase */
+  letter-spacing: 2px; /* add letter spacing for readability */
+  margin-top: 50px; /* add top margin for spacing */
+}
+h1:hover {
+  padding: 15px;
+  font-size: 40px;
+  text-align: center;
+  border: 1px solid yellowgreen;
+  background-color: PINK;
+  color: #000;
+}
+body{
+	content: center;
+}
+</style>
+<div class="topnav" id="myTopnav">
+	<a href="cc.html" class="active">HOME</a>
+	<a href="weblab3.html">FORM</a>
+	<a href="web4.html">CGPA CALCULATOR</a>
+	<a href="contact.html">CONTACT</a>
+	<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+	  <i class="fa fa-bars"></i>
+	</a>
+  </div>
+<center><br><br><br><br>
+<fieldset>
+<body>
+	<body background="https://t3.ftcdn.net/jpg/00/31/30/60/360_F_31306048_2kvZTRcwm8X1b2zy607S7m8HYKZLmuAe.jpg"style="image-resolution: 720dpi;background-repeat:no-repeat;background-size:cover;"></body> 
+	<h1 style="color: cadetblue;">CGPA Calculator</h1>
+<fieldset>
+	<img src="https://e0.pxfuel.com/wallpapers/567/126/desktop-wallpaper-calculate-rolls-calculator-thumbnail.jpg" alt="my image" height="50%">
+	<table>
+		<thead>
+			<tr>
+				<th>Course Code</th>
+				<th>Credit Units</th>
+				<th>Grade</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody id="courseTable">
+			<!-- Courses will be added dynamically here -->
+		</tbody>
+		<tfoot>
+			<tr>
+				<td><input type="text" id="courseCode"></td>
+				<td><input type="number" id="creditUnits"></td>
+				<td><input type="text" id="grade"></td>
+				<td><button onclick="addCourse()">Add Course</button></td>
+			</tr>
+		</tfoot>
+	</table>
+</fieldset>
+
+
+	<button onclick="calculateCGPA()">Calculate CGPA</button>
+	<p>Your CGPA is: <span id="cgpa"></span></p>
+
+	<script>
+		let courses = []; // array to store courses
+
+		function addCourse() {
+			// get values from input fields
+			let courseCode = document.getElementById("courseCode").value;
+			let creditUnits = parseInt(document.getElementById("creditUnits").value);
+			let grade = document.getElementById("grade").value.toUpperCase();
+
+			// create course object
+			let course = {
+				code: courseCode,
+				creditUnits: creditUnits,
+				grade: grade
+			};
+
+			// add course to array
+			courses.push(course);
+
+			// create table row for course
+			let row = document.createElement("tr");
+			row.innerHTML = `
+				<td>${course.code}</td>
+				<td>${course.creditUnits}</td>
+				<td>${course.grade}</td>
+				<td><button onclick="removeCourse(${courses.length - 1})">Remove Course</button></td>
+			`;
+
+			// add row to table
+			document.getElementById("courseTable").appendChild(row);
+
+			// clear input fields
+			document.getElementById("courseCode").value = "";
+			document.getElementById("creditUnits").value = "";
+			document.getElementById("grade").value = "";
+		}
+
+		function removeCourse(index) {
+			// remove course from array
+			courses.splice(index, 1);
+
+			// remove row from table
+			document.getElementById("courseTable").deleteRow(index);
+		}
+
+		function calculateCGPA() {
+			let totalGradePoints = 0;
+			let totalCreditUnits = 0;
+
+			// calculate total grade points and credit units
+			for (let course of courses) {
+				let gradePoint = getGradePoint(course.grade);
+				totalGradePoints += gradePoint * course.creditUnits;
+				totalCreditUnits += course.creditUnits;
+			}
+
+			// calculate CGPA
+			let cgpa = totalGradePoints / totalCreditUnits;
+
+			// display CGPA
+			document.getElementById("cgpa").innerHTML = cgpa.toFixed(2);
+		}
+
+		function getGradePoint(grade) {
+			switch (grade) {
+				case "O": return 5.0;
+				case "A": return 4.0;
+				case "B": return 3.0;
+				case "C": return 2.0;
+				case "D": return 1.0;
+				default: return 0.0;
+			}
+		}
+	</script>
+	</body>
+	</body></fieldset></center>
+</body>
+</html>

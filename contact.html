@@ -1,0 +1,207 @@
+<html lang="en">
+<head>
+  <style>
+    body {margin:0;font-family:Arial}
+    
+    .topnav {
+      overflow: hidden;
+      background-color: cadetblue;
+    }
+    
+    .topnav a {
+      float: left;
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    
+    .active {
+      background-color: pink;
+      color:black;
+    }
+    
+    .topnav .icon {
+      display: none;
+    }
+    
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+    
+    .dropdown .dropbtn {
+      font-size: 17px;    
+      border: none;
+      outline: none;
+      color: black;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      float: none;
+      color:rgb(105, 208, 249);
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    
+    .topnav a:hover, .dropdown:hover .dropbtn {
+      background-color: pink;
+      color: skyblue;
+    }
+    
+    .dropdown-content a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    
+    @media screen and (max-width: 600px) {
+      .topnav a:not(:first-child), .dropdown .dropbtn {
+        display: none;
+      }
+      .topnav a.icon {
+        float: right;
+        display: block;
+      }
+    }
+    
+    @media screen and (max-width: 600px) {
+      .topnav.responsive {position: relative;}
+      .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+      .topnav.responsive .dropdown {float: none;}
+      .topnav.responsive .dropdown-content {position: relative;}
+      .topnav.responsive .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+      }
+    }
+    </style>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <style>
+    .fa {
+  padding: 5px;
+  font-size: 20px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #1150d6;
+  color: white;
+}
+.fa-twitter {
+  background: #93cefb;
+  color: white;
+}
+.fa-linkedin {
+  background: #044a6b;
+  color: white;
+}
+  </style>
+
+</head>
+<body>
+  <div class="topnav" id="myTopnav">
+    <a href="cc.html" class="active">HOME</a>
+    <a href="weblab3.html">FORM</a>
+    <a href="web4.html">CGPA CALCULATOR</a>
+    <a href="contact.html">CONTACT</a>
+
+  </div>
+ <center><h1 style="color:rgb(220, 9, 136)">KONGU ENGINEERING COLLEGE CONTACT DETAILS</h1></center>
+  <marquee><img src="https://kongu.ac.in/images/aboutkec.jpg" alt="Responsive image" height="250" weight="190"><img src="https://www.kongu.ac.in/webalbum/img/kec.JPG" alt="Responsive image" height="250" weight="190"   ><img src="https://www.kongu.ac.in/source/recentupdates/14.jpg" alt="Responsive image" height="250" weight="190"><img src="https://content3.jdmagicbox.com/comp/perundurai/57/9999pmulchnstd2800057/catalogue/kongu-engineering-college-perundurai-ho-perundurai-colleges-0f5hcel.jpg" alt="Responsive image" height=250 weight=190></marquee>
+  <body background="https://t3.ftcdn.net/jpg/00/31/30/60/360_F_31306048_2kvZTRcwm8X1b2zy607S7m8HYKZLmuAe.jpg"style="image-resolution: 720dpi;background-repeat:no-repeat;background-size:cover;"></body> 
+
+<div class="container">
+  <div class="row" style="padding:5px;">
+  <div class="col-md-12">
+    <h5 class="heading">ADMINISTRATION /RECEPTION</h5>
+    <div class="alert alert-success">
+      <p>KONGU ENGINEERING COLLEGE<br />
+      Perundurai,Erode-638 060,Tamilnadu,India<br />
+    phone:04294 - 226666,226666,226500</p>
+    </div>
+    <h5  class="heading">Principal</h5>
+    <div class="alert alert-danger">
+        <p>
+            Phone : 04294 - 220583<br />
+            Fax : 04294 - 220087<br />
+            E-mail : <a href="mailto:principal@kongu.ac.in">principal@kongu.ac.in</a></font>
+        </p>
+    </div>
+    <h5  class="heading">Admission Enquiry</h5>
+                            <div class="alert alert-danger">
+                                <p>
+                                    Phone : 04294-226515 / 04294-226517 <br />
+                                    Mobile: 9965277765 / 9443020583<br />
+
+                                </p>
+                            </div>
+                            <h5  class="heading">Placement & Training Cell</h5>
+                            <div class="alert alert-warning">
+                                <p>
+                                    Placement Officer<br />
+                                    Phone : 04294 - 226644, 226564<br />
+
+                                    Fax : 04294 - 220087<br />
+                                    E-mail : <a href="mailto:placement@kongu.ac.in">placement@kongu.ac.in, placement@kongu.edu</a>
+                                </p>
+                            </div> 
+                            <h5  class="heading">Industry Institute Partnership Cell</h5>
+                            <div class="alert alert-info">
+                                <p><font color="000">  Chief Co-ordinator<br />
+                                    Phone : 04294-225777 (DIRECT), 226642<br />
+                                    Telefax : 04294 - 225777(DIRECT)<br />
+                                    Mobile No. : +91 9894157003<br />
+                                    E-mail : <a href="mailto:keciipc@kongu.ac.in">keciipc@kongu.ac.in</a></font>
+                                </p>
+                            </div>
+
+                      
+  </div>
+</div>
+</body>
+</html>

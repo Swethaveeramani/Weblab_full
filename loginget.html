@@ -1,0 +1,163 @@
+<html lang="en">
+
+<head>
+    <style>
+        body {margin:0;font-family:Arial}
+        
+        .topnav {
+          overflow: hidden;
+          background-color: cadetblue;
+        }
+        
+        .topnav a {
+          float: left;
+          display: block;
+          color: black;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 17px;
+        }
+        
+        .active {
+          background-color: pink;
+          color:black;
+        }
+        
+        .topnav .icon {
+          display: none;
+        }
+        
+        .dropdown {
+          float: left;
+          overflow: hidden;
+        }
+        
+        .dropdown .dropbtn {
+          font-size: 17px;    
+          border: none;
+          outline: none;
+          color: black;
+          padding: 14px 16px;
+          background-color: inherit;
+          font-family: inherit;
+          margin: 0;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: white;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        
+        .dropdown-content a {
+          float: none;
+          color:rgb(105, 208, 249);
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+        
+        .topnav a:hover, .dropdown:hover .dropbtn {
+          background-color: pink;
+          color: skyblue;
+        }
+        
+        .dropdown-content a:hover {
+          background-color: #ddd;
+          color: black;
+        }
+        
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+        
+        @media screen and (max-width: 600px) {
+          .topnav a:not(:first-child), .dropdown .dropbtn {
+            display: none;
+          }
+          .topnav a.icon {
+            float: right;
+            display: block;
+          }
+        }
+        
+        @media screen and (max-width: 600px) {
+          .topnav.responsive {position: relative;}
+          .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+          .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+          }
+          .topnav.responsive .dropdown {float: none;}
+          .topnav.responsive .dropdown-content {position: relative;}
+          .topnav.responsive .dropdown .dropbtn {
+            display: block;
+            width: 100%;
+            text-align: left;
+          }
+        }
+        h2 {
+        background-color: #46f1eb;
+        color: #FFF;
+        letter-spacing: 1px;
+        margin:0;
+        padding:0;
+    }
+    
+    .alignright {
+    
+    float: right;
+    }
+        </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get method</title>
+</head>
+
+<body> 
+    <body background="https://t3.ftcdn.net/jpg/00/31/30/60/360_F_31306048_2kvZTRcwm8X1b2zy607S7m8HYKZLmuAe.jpg"style="image-resolution: 720dpi;background-repeat:no-repeat;background-size:cover;"></body> 
+    <div class="topnav" id="myTopnav">
+      <a href="cc.html" class="active">HOME</a>
+      <a href="weblab3.html">FORM</a>
+      <a href="web4.html">CGPA CALCULATOR</a>
+      <a href="contact.html">CONTACT</a>
+    </div>
+<center>
+    <h1 id="a">Registration Form</h1>
+    <form action="http://localhost:4000/" method="get">
+      <strong>Name <input type="text" name="username" value=""><br><br>
+        Email <input type="email" name="email" value=""><br><br>
+        Address <input type="text" name="address" value=""><br><br>
+        <input type="submit" name="login" value="login"></strong>  
+    </form></center>
+</body>
+<style>
+    body{
+        background-color: blanchedalmond;
+        background-repeat:no-repeat;
+        background-size:100% 100%;
+        font-family: 'Franklin Gothic Medium';
+        color: rgb(255, 46, 46);
+    }
+    h1{
+        color: rgb(153, 0, 255);
+    }
+    form
+    {
+        padding: 10% 35%;
+       
+    }
+</style>
+</html>
+

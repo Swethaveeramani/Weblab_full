@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    body {margin:0;font-family:Arial}
+    
+    .topnav {
+      overflow: hidden;
+      background-color: cadetblue;
+    }
+    
+    .topnav a {
+      float: left;
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    
+    .active {
+      background-color: pink;
+      color:black;
+    }
+    
+    .topnav .icon {
+      display: none;
+    }
+    
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+    
+    .dropdown .dropbtn {
+      font-size: 17px;    
+      border: none;
+      outline: none;
+      color: black;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      float: none;
+      color:rgb(105, 208, 249);
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    
+    .topnav a:hover, .dropdown:hover .dropbtn {
+      background-color: pink;
+      color: skyblue;
+    }
+    
+    .dropdown-content a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    
+    @media screen and (max-width: 600px) {
+      .topnav a:not(:first-child), .dropdown .dropbtn {
+        display: none;
+      }
+      .topnav a.icon {
+        float: right;
+        display: block;
+      }
+    }
+    
+    @media screen and (max-width: 600px) {
+      .topnav.responsive {position: relative;}
+      .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+      .topnav.responsive .dropdown {float: none;}
+      .topnav.responsive .dropdown-content {position: relative;}
+      .topnav.responsive .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+      }
+    }
+    h2 {
+    background-color: #46f1eb;
+    color: #FFF;
+    letter-spacing: 1px;
+    margin:0;
+    padding:0;
+}
+
+.alignright {
+
+float: right;
+}
+
+body {
+         margin: 0;
+  }
+  .hea{
+            margin: 0;
+         position: absolute;
+         color: red;
+         top: 30%;
+         left: 50%;
+         transform: translate(-35%, -50%);
+        }
+        input[type=submit] {
+  background-color:pink;
+  color:black;
+}
+.container{
+            margin: 0;
+         position: absolute;
+         color:lemon;
+         top: 45%;
+         left: 50%;
+         transform: translate(-35%, -50%);
+         
+        }
+
+.image-container {
+  position: relative;
+}
+.flip-box {
+        background-color: transparent;
+        width: 200px;
+        height: 200px;
+        perspective: 1000px;
+        border:#4CAF50;
+      }
+
+      .flip-box-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
+      .flip-box:hover .flip-box-inner {
+        transform: rotateY(180deg);
+      }
+
+      .flip-box-front,
+      .flip-box-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+      }
+
+      .flip-box-front {
+        background-color: #bbb;
+        color: royalblue;
+      }
+      .flip-box-back {
+        background-color: #555;
+        color:skyblue;
+        transform: rotateY(180deg);
+      }
+      img {
+        display: inline-block;
+      }
+      .row {
+   display: flex;
+   flex-wrap: wrap;
+}
+.col {
+   flex: 1;
+   padding: 10px;
+   box-sizing: border-box;
+}  
+
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(166, 208, 42, 0.5);
+}
+/* Style the links */
+a {
+  display: inline-block;
+  margin: 10px;
+  color: #333;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+/* Style the icons */
+i {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #eee;
+}
+
+/* Style the Instagram icon */
+.fa-instagram {
+  color: #e1306c;
+}
+
+/* Style the Twitter icon */
+.fa-twitter {
+  color: #1da1f2;
+}
+
+/* Style the Telegram icon */
+.icon-telegram {
+  font-size: 32px;
+  color: #52a3f3;
+}
+
+/* Style the Facebook icon */
+.fa-facebook {
+  color: #3b5998;
+}
+
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KEC</title>
+</head> 
+    <body background="https://t3.ftcdn.net/jpg/00/31/30/60/360_F_31306048_2kvZTRcwm8X1b2zy607S7m8HYKZLmuAe.jpg"style="image-resolution: 720dpi;background-repeat:no-repeat;background-size:cover;"></body> 
+    <div class="topnav" id="myTopnav">
+      <a href="loginmon.html"><i class="fa fa-user-circle"></i></a>
+      <a href="cc.html" class="active">HOME</a>
+      <a href="weblab3.html">FORM</a>
+      <a href="web4.html">CGPA CALCULATOR</a>
+      <a href="contact.html">CONTACT</a>
+      <a href="ang.html">BOOK</a>
+      <h2 class="alignright"><a href="resume.html">DESIGNED BY:</h2>
+
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <center><h1 style="color:seagreen;">KEC</h1></center>
+  <h3><p style ="color:black"><strong> Kongu Engineering College</strong> is an autonomous engineering college located at Perundurai, Erode district in the state of Tamil Nadu in India. It is affiliated to Anna University and accredited <mark>'A++'</mark> by National Assessment and Accreditation Council.</h3></p>
+   <h1><p style ="color:palevioletred">KEC WEBSITE</p></h1>
+   <marquee><h3 style="color:blue">if you need any auditorium  please fill this below form  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   if you need any auditorium please fill this below form   &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if you need any auditorium please fill this below form   </h3></marquee>
+   <a href="file:///C:/21ITR112/maha.html"target="blank">
+   <img src="https://www.indiastudychannel.com/attachments/colleges/42-117465-Maharaja-Auditorium-Erode.jpg" alt="Maharaja auditorium" width="700" height="400">
+  </a>
+  <a href="file:///C:/21ITR112/convention.html"target="blank">
+    <img src="https://static.zingyhomes.com/projectImages/cache/e1/75/e1759a84aa7128c3b5bb9d22b353bc2c.jpg" alt="Covention center" width="700" height="400"></a>
+    <fieldset>
+    <p><h1>CLICK THE ABOVE TWO PHOTOS</h1></p>
+    </fieldset>
+    <div class="row">
+      <div class="col">
+    <div class="flip-box">
+      <div class="flip-box-inner">
+        <div class="flip-box-front">
+          <img src="https://www.kongu.ac.in/webalbum/img/kec.JPG" alt="my image" width="100%" height="100%"><br>
+        </div>
+        <div class="flip-box-back">
+          <center><br><br>
+          <h2>KEC</h2>
+          <h3><a href="https://kongu.ac.in/">About kec (click here)</a></h3>
+        </div>
+      </div>
+    </div>  
+      </div>
+      <div class="col">
+        <div class="flip-box">
+          <div class="flip-box-inner">
+            <div class="flip-box-front">
+              <img src="https://img.sur.ly/thumbnails/620x343/r/results.kongu.edu.png" alt="my image" width="100%" height="100%"><br>
+        </div>
+          <div class="flip-box-back">
+            <br><br>
+         <center><h2>RESULT</h2>
+          <h3><a href="https://coe.kongu.edu/">Result page (click here)</a></h3>          </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <img src="https://www.kec.ac.in/wp-content/themes/kec/images/DSC_0131.jpg" width="100%" height="100%"><br>
+              </div>
+              <div class="flip-box-back">
+                <br><br>
+                <center><h2>PLACEMENT</h2>
+                  <h3><a href="https://admin.placement.kongu.edu/login">Kec student portal(placement)</a></h3>
+              </div>   
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="flip-box">
+              <div class="flip-box-inner">
+                <div class="flip-box-front">
+                  <img src="data:image/png;base64,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" alt="my image" width="100%" height="100%"><br>
+
+                </div>
+                <div class="flip-box-back">
+                  <br><br>
+                  <center><h2>REGULATION</h2>
+                    <h3><a href="https://coe.kongu.edu/Regulations/">Kec Syllabus</a></h3>                </div>   
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="flip-box">
+                <div class="flip-box-inner">
+                  <div class="flip-box-front">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6adi3dGGYjve0KO24z5QaGII8cgZ673jxxWYBEhkyiDLTcCz0GGYX79WFYZOCJeKncqo&usqp=CAU" alt="my image" width="100%" height="100%"><br>
+  
+                  </div>
+                  <div class="flip-box-back">
+                    <br><br>
+                    <center><h2>FACILITIES</h2>
+                      <h3><a href="https://kongu.ac.in/facilities.php">Kec facilities and details</a></h3>
+                  </div>   
+                  </div>
+                </div>
+              </div>
+        </div>
+        <a href="https://www.instagram.com/">
+          <i class="fa fa-instagram"></i>
+        </a>
+      
+        <!-- Twitter icon -->
+        <a href="https://twitter.com/">
+          <i class="fa fa-twitter"></i>
+        </a>
+      
+        <!-- Telegram icon -->
+        <a href="https://telegram.org/">
+          <i class="fa fa-telegram"></i>
+        </a>
+      
+        <!-- Facebook icon -->
+        <a href="https://www.facebook.com/">
+          <i class="fa fa-facebook"></i>
+        </a>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
+
+</body>
+</html>
